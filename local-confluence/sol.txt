@@ -1,0 +1,194 @@
+MAYBE
+
+-- Is this system SN? ...MAYBE.
+
+
+******** Critical pairs ********
+1: Overlap (1)-(2)--- Xmul2_0'|-> z, Xmul1_0|-> z -----------------------------
+   (1) |a(a(xpls,z),Xmul1_0)| => Xmul1_0
+   (2) a(a(xpls,Xmul2_0'),z) => Xmul2_0'
+                               a(a(xpls,z),z)
+                             z <-(1)-/\-(2)-> z
+                             ---> z =OK= z <---
+
+2: Overlap (1)-(4)--- Xmul4_0'|-> z, Xmul1_0|-> a(s,Xmul4_1') -----------------
+   (1) |a(a(xpls,z),Xmul1_0)| => Xmul1_0
+   (4) a(a(xpls,Xmul4_0'),a(s,Xmul4_1')) => a(s,a(a(xpls,Xmul4_0'),Xmul4_1'))
+                         a(a(xpls,z),a(s,Xmul4_1'))
+                 a(s,Xmul4_1') <-(1)-/\-(4)-> a(s,a(a(xpls,z),Xmul4_1'))
+                 ---> a(s,Xmul4_1') =OK= a(s,Xmul4_1') <---
+
+3: Overlap (2)-(3)--- Xmul2_0|-> a(s,Xmul3_0'), Xmul3_1'|-> z -----------------
+   (2) |a(a(xpls,Xmul2_0),z)| => Xmul2_0
+   (3) a(a(xpls,a(s,Xmul3_0')),Xmul3_1') => a(s,a(a(xpls,Xmul3_0'),Xmul3_1'))
+                         a(a(xpls,a(s,Xmul3_0')),z)
+                 a(s,Xmul3_0') <-(2)-/\-(3)-> a(s,a(a(xpls,Xmul3_0'),z))
+                 ---> a(s,Xmul3_0') =OK= a(s,Xmul3_0') <---
+
+4: Overlap (3)-(4)--- Xmul4_0'|-> a(s,Xmul3_0), Xmul3_1|-> a(s,Xmul4_1') ------
+   (3) |a(a(xpls,a(s,Xmul3_0)),Xmul3_1)| => a(s,a(a(xpls,Xmul3_0),Xmul3_1))
+   (4) a(a(xpls,Xmul4_0'),a(s,Xmul4_1')) => a(s,a(a(xpls,Xmul4_0'),Xmul4_1'))
+                    a(a(xpls,a(s,Xmul3_0)),a(s,Xmul4_1'))
+a(s,a(a(xpls,Xmul3_0),a(s,Xmul4_1'))) <-(3)-/\-(4)-> a(s,a(a(xpls,a(s,Xmul3_0)),Xmul4_1'))
+---> a(s,a(s,a(a(xpls,Xmul3_0),Xmul4_1'))) =OK= a(s,a(s,a(a(xpls,Xmul3_0),Xmul4_1'))) <---
+
+5: Overlap (8)-(13)--- Xmul13_0'|-> Xmul8_1, Xmul8_2|-> a(s,Xmul13_1'), Xmul8_3|-> a(s,Xmul13_2'), Xmul13_3'|
+   (8) a(a(el,Xmul8_0),|a(a(a(a(a(pi,Xmul8_1),Xmul8_2),Xmul8_3),Xmul8_4),l(Xmul8_5,357.Xmul8_6[357]))|) => p(a(a(el,a(a(xpls,Xmul8_1),Xmul8_2)),Xmul8_4),358.a(a(el,a(a(xpls,Xmul8_1),Xmul8_3)),Xmul8_6[358]))
+   (13) a(a(a(a(a(pi,Xmul13_0'),a(s,Xmul13_1')),a(s,Xmul13_2')),Xmul13_3'),Xmul13_4') => a(a(a(a(a(pi,a(s,Xmul13_0')),Xmul13_1'),Xmul13_2'),Xmul13_3'),Xmul13_4')
+a(a(el,Xmul8_0),a(a(a(a(a(pi,Xmul8_1),a(s,Xmul13_1')),a(s,Xmul13_2')),Xmul8_4),l(Xmul8_5,357.Xmul8_6[357])))
+p(a(a(el,a(a(xpls,Xmul8_1),a(s,Xmul13_1'))),Xmul8_4),3581.a(a(el,a(a(xpls,Xmul8_1),a(s,Xmul13_2'))),Xmul8_6[3581])) <-(8)-/\-(13)-> a(a(el,Xmul8_0),a(a(a(a(a(pi,a(s,Xmul8_1)),Xmul13_1'),Xmul13_2'),Xmul8_4),l(Xmul8_5,357.Xmul8_6[357])))
+---> p(a(a(el,a(s,a(a(xpls,Xmul8_1),Xmul13_1'))),Xmul8_4),3581.a(a(el,a(s,a(a(xpls,Xmul8_1),Xmul13_2'))),Xmul8_6[3581])) =E= p(a(a(el,a(s,a(a(xpls,Xmul8_1),Xmul13_1'))),Xmul8_4),35825.a(a(el,a(s,a(a(xpls,Xmul8_1),Xmul13_2'))),Xmul8_6[35825])) <---
+
+6: Overlap (8)-(14)--- Xmul8_1|-> z, Xmul8_2|-> a(s,Xmul14_0'), Xmul8_3|-> z, Xmul8_4|-> a(a(a(up,Xmul14_1'),
+   (8) a(a(el,Xmul8_0),|a(a(a(a(a(pi,Xmul8_1),Xmul8_2),Xmul8_3),Xmul8_4),l(Xmul8_5,357.Xmul8_6[357]))|) => p(a(a(el,a(a(xpls,Xmul8_1),Xmul8_2)),Xmul8_4),358.a(a(el,a(a(xpls,Xmul8_1),Xmul8_3)),Xmul8_6[358]))
+   (14) a(a(a(a(a(pi,z),a(s,Xmul14_0')),z),a(a(a(up,Xmul14_1'),empty),Xmul14_2')),Xmul14_3') => a(a(a(a(a(pi,z),Xmul14_0'),z),Xmul14_2'),Xmul14_3')
+a(a(el,Xmul8_0),a(a(a(a(a(pi,z),a(s,Xmul14_0')),z),a(a(a(up,Xmul14_1'),empty),Xmul14_2')),l(Xmul8_5,357.Xmul8_6[357])))
+p(a(a(el,a(a(xpls,z),a(s,Xmul14_0'))),a(a(a(up,Xmul14_1'),empty),Xmul14_2')),3581.a(a(el,a(a(xpls,z),z)),Xmul8_6[3581])) <-(8)-/\-(14)-> a(a(el,Xmul8_0),a(a(a(a(a(pi,z),Xmul14_0'),z),Xmul14_2'),l(Xmul8_5,357.Xmul8_6[357])))
+---> p(a(a(el,Xmul14_0'),Xmul14_2'),3581.a(a(el,z),Xmul8_6[3581])) =E= p(a(a(el,Xmul14_0'),Xmul14_2'),35836.a(a(el,z),Xmul8_6[35836])) <---
+
+7: Overlap (8)-(15)--- Xmul8_1|-> a(s,Xmul15_0'), Xmul8_2|-> z, Xmul15_1'|-> Xmul8_3, Xmul8_4|-> a(a(a(up,Xmu
+   (8) a(a(el,Xmul8_0),|a(a(a(a(a(pi,Xmul8_1),Xmul8_2),Xmul8_3),Xmul8_4),l(Xmul8_5,357.Xmul8_6[357]))|) => p(a(a(el,a(a(xpls,Xmul8_1),Xmul8_2)),Xmul8_4),358.a(a(el,a(a(xpls,Xmul8_1),Xmul8_3)),Xmul8_6[358]))
+   (15) a(a(a(a(a(pi,a(s,Xmul15_0')),z),Xmul15_1'),a(a(a(up,Xmul15_2'),empty),Xmul15_3')),Xmul15_4') => a(a(a(a(a(pi,Xmul15_0'),z),a(s,Xmul15_1')),Xmul15_3'),Xmul15_4')
+a(a(el,Xmul8_0),a(a(a(a(a(pi,a(s,Xmul15_0')),z),Xmul8_3),a(a(a(up,Xmul15_2'),empty),Xmul15_3')),l(Xmul8_5,357.Xmul8_6[357])))
+p(a(a(el,a(a(xpls,a(s,Xmul15_0')),z)),a(a(a(up,Xmul15_2'),empty),Xmul15_3')),3581.a(a(el,a(a(xpls,a(s,Xmul15_0')),Xmul8_3)),Xmul8_6[3581])) <-(8)-/\-(15)-> a(a(el,Xmul8_0),a(a(a(a(a(pi,Xmul15_0'),z),a(s,Xmul8_3)),Xmul15_3'),l(Xmul8_5,357.Xmul8_6[357])))
+---> p(a(a(el,Xmul15_0'),Xmul15_3'),3581.a(a(el,a(s,a(a(xpls,Xmul15_0'),Xmul8_3))),Xmul8_6[3581])) =E= p(a(a(el,Xmul15_0'),Xmul15_3'),35847.a(a(el,a(s,a(a(xpls,Xmul15_0'),Xmul8_3))),Xmul8_6[35847])) <---
+
+8: Overlap (8)-(16)--- Xmul8_1|-> a(s,Xmul16_0'), Xmul8_2|-> a(s,Xmul16_1'), Xmul8_3|-> z, Xmul8_4|-> a(a(a(u
+   (8) a(a(el,Xmul8_0),|a(a(a(a(a(pi,Xmul8_1),Xmul8_2),Xmul8_3),Xmul8_4),l(Xmul8_5,357.Xmul8_6[357]))|) => p(a(a(el,a(a(xpls,Xmul8_1),Xmul8_2)),Xmul8_4),358.a(a(el,a(a(xpls,Xmul8_1),Xmul8_3)),Xmul8_6[358]))
+   (16) a(a(a(a(a(pi,a(s,Xmul16_0')),a(s,Xmul16_1')),z),a(a(a(up,Xmul16_2'),empty),Xmul16_3')),Xmul16_4') => a(a(a(up,a(s,a(a(xpls,Xmul16_0'),Xmul16_1'))),empty),a(a(a(a(a(pi,a(s,Xmul16_0')),Xmul16_1'),z),Xmul16_3'),Xmul16_4'))
+a(a(el,Xmul8_0),a(a(a(a(a(pi,a(s,Xmul16_0')),a(s,Xmul16_1')),z),a(a(a(up,Xmul16_2'),empty),Xmul16_3')),l(Xmul8_5,357.Xmul8_6[357])))
+p(a(a(el,a(a(xpls,a(s,Xmul16_0')),a(s,Xmul16_1'))),a(a(a(up,Xmul16_2'),empty),Xmul16_3')),3581.a(a(el,a(a(xpls,a(s,Xmul16_0')),z)),Xmul8_6[3581])) <-(8)-/\-(16)-> a(a(el,Xmul8_0),a(a(a(up,a(s,a(a(xpls,Xmul16_0'),Xmul16_1'))),empty),a(a(a(a(a(pi,a(s,Xmul16_0')),Xmul16_1'),z),Xmul16_3'),l(Xmul8_5,357.Xmul8_6[357]))))
+---> p(a(a(el,a(s,a(a(xpls,Xmul16_0'),Xmul16_1'))),Xmul16_3'),3581.a(a(el,a(s,Xmul16_0')),Xmul8_6[3581])) =E= p(a(a(el,a(s,a(a(xpls,Xmul16_0'),Xmul16_1'))),Xmul16_3'),35860.a(a(el,a(s,Xmul16_0')),Xmul8_6[35860])) <---
+
+9: Overlap (8)-(17)--- Xmul8_1|-> a(s,a(s,Xmul17_0')), Xmul17_1'|-> Xmul8_2, Xmul8_3|-> z, Xmul17_2'|-> Xmul8
+   (8) a(a(el,Xmul8_0),|a(a(a(a(a(pi,Xmul8_1),Xmul8_2),Xmul8_3),Xmul8_4),l(Xmul8_5,357.Xmul8_6[357]))|) => p(a(a(el,a(a(xpls,Xmul8_1),Xmul8_2)),Xmul8_4),358.a(a(el,a(a(xpls,Xmul8_1),Xmul8_3)),Xmul8_6[358]))
+   (17) a(a(a(a(a(pi,a(s,a(s,Xmul17_0'))),Xmul17_1'),z),Xmul17_2'),l(Xmul17_3',361'.a(a(a(up,Xmul17_4'[361']),empty),Xmul17_5'[361']))) => a(a(a(a(a(pi,a(s,Xmul17_0')),a(s,Xmul17_1')),z),Xmul17_2'),l(Xmul17_3',362'.Xmul17_5'[362']))
+a(a(el,Xmul8_0),a(a(a(a(a(pi,a(s,a(s,Xmul17_0'))),Xmul8_2),z),Xmul8_4),l(Xmul8_5,357.a(a(a(up,Xmul17_4'[357]),empty),Xmul17_5'[357]))))
+p(a(a(el,a(a(xpls,a(s,a(s,Xmul17_0'))),Xmul8_2)),Xmul8_4),3581.a(a(el,a(a(xpls,a(s,a(s,Xmul17_0'))),z)),a(a(a(up,Xmul17_4'[3581]),empty),Xmul17_5'[3581]))) <-(8)-/\-(17)-> a(a(el,Xmul8_0),a(a(a(a(a(pi,a(s,Xmul17_0')),a(s,Xmul8_2)),z),Xmul8_4),l(Xmul8_5,362d9.Xmul17_5'[362d9])))
+---> p(a(a(el,a(s,a(s,a(a(xpls,Xmul17_0'),Xmul8_2)))),Xmul8_4),3581.a(a(el,a(s,Xmul17_0')),Xmul17_5'[3581])) =E= p(a(a(el,a(s,a(s,a(a(xpls,Xmul17_0'),Xmul8_2)))),Xmul8_4),35872.a(a(el,a(s,Xmul17_0')),Xmul17_5'[35872])) <---
+
+10: Overlap (8)-(18)--- Xmul18_0'|-> Xmul8_1, Xmul8_2|-> z, Xmul8_3|-> a(s,Xmul18_1'), Xmul18_2'|-> Xmul8_4, X
+   (8) a(a(el,Xmul8_0),|a(a(a(a(a(pi,Xmul8_1),Xmul8_2),Xmul8_3),Xmul8_4),l(Xmul8_5,357.Xmul8_6[357]))|) => p(a(a(el,a(a(xpls,Xmul8_1),Xmul8_2)),Xmul8_4),358.a(a(el,a(a(xpls,Xmul8_1),Xmul8_3)),Xmul8_6[358]))
+   (18) a(a(a(a(a(pi,Xmul18_0'),z),a(s,Xmul18_1')),Xmul18_2'),l(Xmul18_3',365'.a(a(a(up,Xmul18_4'[365']),empty),Xmul18_5'[365']))) => a(a(a(up,a(a(xpls,Xmul18_0'),Xmul18_1')),empty),a(a(a(a(a(pi,Xmul18_0'),z),Xmul18_1'),Xmul18_2'),l(Xmul18_3',366'.Xmul18_5'[366'])))
+a(a(el,Xmul8_0),a(a(a(a(a(pi,Xmul8_1),z),a(s,Xmul18_1')),Xmul8_4),l(Xmul8_5,357.a(a(a(up,Xmul18_4'[357]),empty),Xmul18_5'[357]))))
+p(a(a(el,a(a(xpls,Xmul8_1),z)),Xmul8_4),3581.a(a(el,a(a(xpls,Xmul8_1),a(s,Xmul18_1'))),a(a(a(up,Xmul18_4'[3581]),empty),Xmul18_5'[3581]))) <-(8)-/\-(18)-> a(a(el,Xmul8_0),a(a(a(up,a(a(xpls,Xmul8_1),Xmul18_1')),empty),a(a(a(a(a(pi,Xmul8_1),z),Xmul18_1'),Xmul8_4),l(Xmul8_5,366d8.Xmul18_5'[366d8]))))
+---> p(a(a(el,Xmul8_1),Xmul8_4),3581.a(a(el,a(a(xpls,Xmul8_1),Xmul18_1')),Xmul18_5'[3581])) =E= p(a(a(el,Xmul8_1),Xmul8_4),35885.a(a(el,a(a(xpls,Xmul8_1),Xmul18_1')),Xmul18_5'[35885])) <---
+
+11: Overlap (8)-(19)--- Xmul8_1|-> a(s,z), Xmul19_0'|-> Xmul8_2, Xmul8_3|-> z, Xmul19_1'|-> Xmul8_4, Xmul19_2'
+   (8) a(a(el,Xmul8_0),|a(a(a(a(a(pi,Xmul8_1),Xmul8_2),Xmul8_3),Xmul8_4),l(Xmul8_5,357.Xmul8_6[357]))|) => p(a(a(el,a(a(xpls,Xmul8_1),Xmul8_2)),Xmul8_4),358.a(a(el,a(a(xpls,Xmul8_1),Xmul8_3)),Xmul8_6[358]))
+   (19) a(a(a(a(a(pi,a(s,z)),Xmul19_0'),z),Xmul19_1'),l(Xmul19_2',369'.a(a(a(up,Xmul19_3'[369']),empty),Xmul19_4'[369']))) => a(a(uUp,a(s,Xmul19_0')),a(a(a(a(a(pi,z),a(s,Xmul19_0')),z),Xmul19_1'),l(Xmul19_2',370'.Xmul19_4'[370'])))
+a(a(el,Xmul8_0),a(a(a(a(a(pi,a(s,z)),Xmul8_2),z),Xmul8_4),l(Xmul8_5,357.a(a(a(up,Xmul19_3'[357]),empty),Xmul19_4'[357]))))
+p(a(a(el,a(a(xpls,a(s,z)),Xmul8_2)),Xmul8_4),3581.a(a(el,a(a(xpls,a(s,z)),z)),a(a(a(up,Xmul19_3'[3581]),empty),Xmul19_4'[3581]))) <-(8)-/\-(19)-> a(a(el,Xmul8_0),a(a(uUp,a(s,Xmul8_2)),a(a(a(a(a(pi,z),a(s,Xmul8_2)),z),Xmul8_4),l(Xmul8_5,370d9.Xmul19_4'[370d9]))))
+---> p(a(a(el,a(s,Xmul8_2)),Xmul8_4),3581.a(a(el,z),Xmul19_4'[3581])) =E= p(a(a(el,a(s,Xmul8_2)),Xmul8_4),35898.a(a(el,z),Xmul19_4'[35898])) <---
+
+12: Overlap (10)-(20)--- Xmul10_1|-> z, Xmul20_0'|-> Xmul10_2 ------------------
+   (10) a(a(el,Xmul10_0),|a(a(uUp,Xmul10_1),Xmul10_2)|) => a(a(el,a(a(-,Xmul10_0),Xmul10_1)),Xmul10_2)
+   (20) a(a(uUp,z),Xmul20_0') => Xmul20_0'
+                   a(a(el,Xmul10_0),a(a(uUp,z),Xmul10_2))
+a(a(el,a(a(-,Xmul10_0),z)),Xmul10_2) <-(10)-/\-(20)-> a(a(el,Xmul10_0),Xmul10_2)
+    ---> a(a(el,Xmul10_0),Xmul10_2) =OK= a(a(el,Xmul10_0),Xmul10_2) <---
+
+13: Overlap (10)-(21)--- Xmul10_1|-> a(s,Xmul21_0'), Xmul21_1'|-> Xmul10_2 -----
+   (10) a(a(el,Xmul10_0),|a(a(uUp,Xmul10_1),Xmul10_2)|) => a(a(el,a(a(-,Xmul10_0),Xmul10_1)),Xmul10_2)
+   (21) a(a(uUp,a(s,Xmul21_0')),Xmul21_1') => a(a(a(up,Xmul21_0'),empty),a(a(uUp,Xmul21_0'),Xmul21_1'))
+             a(a(el,Xmul10_0),a(a(uUp,a(s,Xmul21_0')),Xmul10_2))
+a(a(el,a(a(-,Xmul10_0),a(s,Xmul21_0'))),Xmul10_2) <-(10)-/\-(21)-> a(a(el,Xmul10_0),a(a(a(up,Xmul21_0'),empty),a(a(uUp,Xmul21_0'),Xmul10_2)))
+---> a(a(el,a(a(-,a(p2,Xmul10_0)),Xmul21_0')),Xmul10_2) =OK= a(a(el,a(a(-,a(p2,Xmul10_0)),Xmul21_0')),Xmul10_2) <---
+
+14: Overlap (15)-(17)--- Xmul15_0|-> a(s,Xmul17_0'), Xmul17_1'|-> z, Xmul15_1|-> z, Xmul17_2'|-> a(a(a(up,Xmul
+   (15) |a(a(a(a(a(pi,a(s,Xmul15_0)),z),Xmul15_1),a(a(a(up,Xmul15_2),empty),Xmul15_3)),Xmul15_4)| => a(a(a(a(a(pi,Xmul15_0),z),a(s,Xmul15_1)),Xmul15_3),Xmul15_4)
+   (17) a(a(a(a(a(pi,a(s,a(s,Xmul17_0'))),Xmul17_1'),z),Xmul17_2'),l(Xmul17_3',361'.a(a(a(up,Xmul17_4'[361']),empty),Xmul17_5'[361']))) => a(a(a(a(a(pi,a(s,Xmul17_0')),a(s,Xmul17_1')),z),Xmul17_2'),l(Xmul17_3',362'.Xmul17_5'[362']))
+a(a(a(a(a(pi,a(s,a(s,Xmul17_0'))),z),z),a(a(a(up,Xmul15_2),empty),Xmul15_3)),l(Xmul17_3',361'.a(a(a(up,Xmul17_4'[361']),empty),Xmul17_5'[361'])))
+a(a(a(a(a(pi,a(s,Xmul17_0')),z),a(s,z)),Xmul15_3),l(Xmul17_3',361'.a(a(a(up,Xmul17_4'[361']),empty),Xmul17_5'[361']))) <-(15)-/\-(17)-> a(a(a(a(a(pi,a(s,Xmul17_0')),a(s,z)),z),a(a(a(up,Xmul15_2),empty),Xmul15_3)),l(Xmul17_3',362d6.Xmul17_5'[362d6]))
+---> a(a(a(up,a(s,Xmul17_0')),empty),a(a(a(a(a(pi,a(s,Xmul17_0')),z),z),Xmul15_3),l(Xmul17_3',36615.Xmul17_5'[36615]))) =E= a(a(a(up,a(s,Xmul17_0')),empty),a(a(a(a(a(pi,a(s,Xmul17_0')),z),z),Xmul15_3),l(Xmul17_3',362d6.Xmul17_5'[362d6]))) <---
+
+15: Overlap (15)-(18)--- Xmul18_0'|-> a(s,Xmul15_0), Xmul15_1|-> a(s,Xmul18_1'), Xmul18_2'|-> a(a(a(up,Xmul15_
+   (15) |a(a(a(a(a(pi,a(s,Xmul15_0)),z),Xmul15_1),a(a(a(up,Xmul15_2),empty),Xmul15_3)),Xmul15_4)| => a(a(a(a(a(pi,Xmul15_0),z),a(s,Xmul15_1)),Xmul15_3),Xmul15_4)
+   (18) a(a(a(a(a(pi,Xmul18_0'),z),a(s,Xmul18_1')),Xmul18_2'),l(Xmul18_3',365'.a(a(a(up,Xmul18_4'[365']),empty),Xmul18_5'[365']))) => a(a(a(up,a(a(xpls,Xmul18_0'),Xmul18_1')),empty),a(a(a(a(a(pi,Xmul18_0'),z),Xmul18_1'),Xmul18_2'),l(Xmul18_3',366'.Xmul18_5'[366'])))
+a(a(a(a(a(pi,a(s,Xmul15_0)),z),a(s,Xmul18_1')),a(a(a(up,Xmul15_2),empty),Xmul15_3)),l(Xmul18_3',365'.a(a(a(up,Xmul18_4'[365']),empty),Xmul18_5'[365'])))
+a(a(a(a(a(pi,Xmul15_0),z),a(s,a(s,Xmul18_1'))),Xmul15_3),l(Xmul18_3',365'.a(a(a(up,Xmul18_4'[365']),empty),Xmul18_5'[365']))) <-(15)-/\-(18)-> a(a(a(up,a(a(xpls,a(s,Xmul15_0)),Xmul18_1')),empty),a(a(a(a(a(pi,a(s,Xmul15_0)),z),Xmul18_1'),a(a(a(up,Xmul15_2),empty),Xmul15_3)),l(Xmul18_3',366d6.Xmul18_5'[366d6])))
+---> a(a(a(up,a(s,a(a(xpls,Xmul15_0),Xmul18_1'))),empty),a(a(a(a(a(pi,Xmul15_0),z),a(s,Xmul18_1')),Xmul15_3),l(Xmul18_3',36623.Xmul18_5'[36623]))) =E= a(a(a(up,a(s,a(a(xpls,Xmul15_0),Xmul18_1'))),empty),a(a(a(a(a(pi,Xmul15_0),z),a(s,Xmul18_1')),Xmul15_3),l(Xmul18_3',366d6.Xmul18_5'[366d6]))) <---
+
+16: Overlap (15)-(19)--- Xmul15_0|-> z, Xmul19_0'|-> z, Xmul15_1|-> z, Xmul19_1'|-> a(a(a(up,Xmul15_2),empty),
+   (15) |a(a(a(a(a(pi,a(s,Xmul15_0)),z),Xmul15_1),a(a(a(up,Xmul15_2),empty),Xmul15_3)),Xmul15_4)| => a(a(a(a(a(pi,Xmul15_0),z),a(s,Xmul15_1)),Xmul15_3),Xmul15_4)
+   (19) a(a(a(a(a(pi,a(s,z)),Xmul19_0'),z),Xmul19_1'),l(Xmul19_2',369'.a(a(a(up,Xmul19_3'[369']),empty),Xmul19_4'[369']))) => a(a(uUp,a(s,Xmul19_0')),a(a(a(a(a(pi,z),a(s,Xmul19_0')),z),Xmul19_1'),l(Xmul19_2',370'.Xmul19_4'[370'])))
+a(a(a(a(a(pi,a(s,z)),z),z),a(a(a(up,Xmul15_2),empty),Xmul15_3)),l(Xmul19_2',369'.a(a(a(up,Xmul19_3'[369']),empty),Xmul19_4'[369'])))
+a(a(a(a(a(pi,z),z),a(s,z)),Xmul15_3),l(Xmul19_2',369'.a(a(a(up,Xmul19_3'[369']),empty),Xmul19_4'[369']))) <-(15)-/\-(19)-> a(a(uUp,a(s,z)),a(a(a(a(a(pi,z),a(s,z)),z),a(a(a(up,Xmul15_2),empty),Xmul15_3)),l(Xmul19_2',370d6.Xmul19_4'[370d6])))
+---> a(a(a(up,z),empty),a(a(a(a(a(pi,z),z),z),Xmul15_3),l(Xmul19_2',36631.Xmul19_4'[36631]))) =E= a(a(a(up,z),empty),a(a(a(a(a(pi,z),z),z),Xmul15_3),l(Xmul19_2',370d6.Xmul19_4'[370d6]))) <---
+
+17: Overlap (16)-(17)--- Xmul16_0|-> a(s,Xmul17_0'), Xmul17_1'|-> a(s,Xmul16_1), Xmul17_2'|-> a(a(a(up,Xmul16_
+   (16) |a(a(a(a(a(pi,a(s,Xmul16_0)),a(s,Xmul16_1)),z),a(a(a(up,Xmul16_2),empty),Xmul16_3)),Xmul16_4)| => a(a(a(up,a(s,a(a(xpls,Xmul16_0),Xmul16_1))),empty),a(a(a(a(a(pi,a(s,Xmul16_0)),Xmul16_1),z),Xmul16_3),Xmul16_4))
+   (17) a(a(a(a(a(pi,a(s,a(s,Xmul17_0'))),Xmul17_1'),z),Xmul17_2'),l(Xmul17_3',361'.a(a(a(up,Xmul17_4'[361']),empty),Xmul17_5'[361']))) => a(a(a(a(a(pi,a(s,Xmul17_0')),a(s,Xmul17_1')),z),Xmul17_2'),l(Xmul17_3',362'.Xmul17_5'[362']))
+a(a(a(a(a(pi,a(s,a(s,Xmul17_0'))),a(s,Xmul16_1)),z),a(a(a(up,Xmul16_2),empty),Xmul16_3)),l(Xmul17_3',361'.a(a(a(up,Xmul17_4'[361']),empty),Xmul17_5'[361'])))
+a(a(a(up,a(s,a(a(xpls,a(s,Xmul17_0')),Xmul16_1))),empty),a(a(a(a(a(pi,a(s,a(s,Xmul17_0'))),Xmul16_1),z),Xmul16_3),l(Xmul17_3',361'.a(a(a(up,Xmul17_4'[361']),empty),Xmul17_5'[361'])))) <-(16)-/\-(17)-> a(a(a(a(a(pi,a(s,Xmul17_0')),a(s,a(s,Xmul16_1))),z),a(a(a(up,Xmul16_2),empty),Xmul16_3)),l(Xmul17_3',362d6.Xmul17_5'[362d6]))
+---> a(a(a(up,a(s,a(s,a(a(xpls,Xmul17_0'),Xmul16_1)))),empty),a(a(a(a(a(pi,a(s,Xmul17_0')),a(s,Xmul16_1)),z),Xmul16_3),l(Xmul17_3',36241.Xmul17_5'[36241]))) =E= a(a(a(up,a(s,a(s,a(a(xpls,Xmul17_0'),Xmul16_1)))),empty),a(a(a(a(a(pi,a(s,Xmul17_0')),a(s,Xmul16_1)),z),Xmul16_3),l(Xmul17_3',362d6.Xmul17_5'[362d6]))) <---
+
+18: Overlap (16)-(19)--- Xmul16_0|-> z, Xmul19_0'|-> a(s,Xmul16_1), Xmul19_1'|-> a(a(a(up,Xmul16_2),empty),Xmu
+   (16) |a(a(a(a(a(pi,a(s,Xmul16_0)),a(s,Xmul16_1)),z),a(a(a(up,Xmul16_2),empty),Xmul16_3)),Xmul16_4)| => a(a(a(up,a(s,a(a(xpls,Xmul16_0),Xmul16_1))),empty),a(a(a(a(a(pi,a(s,Xmul16_0)),Xmul16_1),z),Xmul16_3),Xmul16_4))
+   (19) a(a(a(a(a(pi,a(s,z)),Xmul19_0'),z),Xmul19_1'),l(Xmul19_2',369'.a(a(a(up,Xmul19_3'[369']),empty),Xmul19_4'[369']))) => a(a(uUp,a(s,Xmul19_0')),a(a(a(a(a(pi,z),a(s,Xmul19_0')),z),Xmul19_1'),l(Xmul19_2',370'.Xmul19_4'[370'])))
+a(a(a(a(a(pi,a(s,z)),a(s,Xmul16_1)),z),a(a(a(up,Xmul16_2),empty),Xmul16_3)),l(Xmul19_2',369'.a(a(a(up,Xmul19_3'[369']),empty),Xmul19_4'[369'])))
+a(a(a(up,a(s,a(a(xpls,z),Xmul16_1))),empty),a(a(a(a(a(pi,a(s,z)),Xmul16_1),z),Xmul16_3),l(Xmul19_2',369'.a(a(a(up,Xmul19_3'[369']),empty),Xmul19_4'[369'])))) <-(16)-/\-(19)-> a(a(uUp,a(s,a(s,Xmul16_1))),a(a(a(a(a(pi,z),a(s,a(s,Xmul16_1))),z),a(a(a(up,Xmul16_2),empty),Xmul16_3)),l(Xmul19_2',370d7.Xmul19_4'[370d7])))
+---> a(a(a(up,a(s,Xmul16_1)),empty),a(a(a(up,Xmul16_1),empty),a(a(uUp,Xmul16_1),a(a(a(a(a(pi,z),a(s,Xmul16_1)),z),Xmul16_3),l(Xmul19_2',37049.Xmul19_4'[37049]))))) =E= a(a(a(up,a(s,Xmul16_1)),empty),a(a(a(up,Xmul16_1),empty),a(a(uUp,Xmul16_1),a(a(a(a(a(pi,z),a(s,Xmul16_1)),z),Xmul16_3),l(Xmul19_2',370d7.Xmul19_4'[370d7]))))) <---
+
+19: Overlap (22)-(23)--- Xmul23_0'|-> z, Xmul22_0|-> z -------------------------
+   (22) |a(a(max,z),Xmul22_0)| => Xmul22_0
+   (23) a(a(max,Xmul23_0'),z) => Xmul23_0'
+                                a(a(max,z),z)
+                            z <-(22)-/\-(23)-> z
+                             ---> z =OK= z <---
+
+#All are joinable, but  CR is not sure (Total 19 CPs)
+
+******** Signature ********
+a : t -> t -> t
+l : t -> (t -> t) -> t
+p : t -> (t -> t) -> t
+b : t -> t -> (t -> t) -> t
+xpls : t
+- : t
+z : t
+el : t
+p2 : t
+s : t
+u : t
+uu : t
+pi : t
+up : t
+uUp : t
+max : t
+empty : t
+ax : t
+ru : t
+
+
+******** Computation rules ********
+ (1)  a(a(xpls,z),Xmul1_0) => Xmul1_0
+ (2)  a(a(xpls,Xmul2_0),z) => Xmul2_0
+ (3)  a(a(xpls,a(s,Xmul3_0)),Xmul3_1) => a(s,a(a(xpls,Xmul3_0),Xmul3_1))
+ (4)  a(a(xpls,Xmul4_0),a(s,Xmul4_1)) => a(s,a(a(xpls,Xmul4_0),Xmul4_1))
+ (5)  a(a(-,Xmul5_0),z) => Xmul5_0
+ (6)  a(a(-,Xmul6_0),a(s,Xmul6_1)) => a(a(-,a(p2,Xmul6_0)),Xmul6_1)
+ (7)  a(a(el,Xmul7_0),a(uu,Xmul7_1)) => a(u,Xmul7_1)
+ (8)  a(a(el,Xmul8_0),a(a(a(a(a(pi,Xmul8_1),Xmul8_2),Xmul8_3),Xmul8_4),l(Xmul8_5,357.Xmul8_6[357]))) => p(a(a(el,a(a(xpls,Xmul8_1),Xmul8_2)),Xmul8_4),358.a(a(el,a(a(xpls,Xmul8_1),Xmul8_3)),Xmul8_6[358]))
+ (9)  a(a(el,Xmul9_0),a(a(a(up,Xmul9_1),empty),Xmul9_2)) => a(a(el,a(p2,Xmul9_0)),Xmul9_2)
+ (10)  a(a(el,Xmul10_0),a(a(uUp,Xmul10_1),Xmul10_2)) => a(a(el,a(a(-,Xmul10_0),Xmul10_1)),Xmul10_2)
+ (11)  a(p2,z) => z
+ (12)  a(p2,a(s,Xmul12_0)) => Xmul12_0
+ (13)  a(a(a(a(a(pi,Xmul13_0),a(s,Xmul13_1)),a(s,Xmul13_2)),Xmul13_3),Xmul13_4) => a(a(a(a(a(pi,a(s,Xmul13_0)),Xmul13_1),Xmul13_2),Xmul13_3),Xmul13_4)
+ (14)  a(a(a(a(a(pi,z),a(s,Xmul14_0)),z),a(a(a(up,Xmul14_1),empty),Xmul14_2)),Xmul14_3) => a(a(a(a(a(pi,z),Xmul14_0),z),Xmul14_2),Xmul14_3)
+ (15)  a(a(a(a(a(pi,a(s,Xmul15_0)),z),Xmul15_1),a(a(a(up,Xmul15_2),empty),Xmul15_3)),Xmul15_4) => a(a(a(a(a(pi,Xmul15_0),z),a(s,Xmul15_1)),Xmul15_3),Xmul15_4)
+ (16)  a(a(a(a(a(pi,a(s,Xmul16_0)),a(s,Xmul16_1)),z),a(a(a(up,Xmul16_2),empty),Xmul16_3)),Xmul16_4) => a(a(a(up,a(s,a(a(xpls,Xmul16_0),Xmul16_1))),empty),a(a(a(a(a(pi,a(s,Xmul16_0)),Xmul16_1),z),Xmul16_3),Xmul16_4))
+ (17)  a(a(a(a(a(pi,a(s,a(s,Xmul17_0))),Xmul17_1),z),Xmul17_2),l(Xmul17_3,361.a(a(a(up,Xmul17_4[361]),empty),Xmul17_5[361]))) => a(a(a(a(a(pi,a(s,Xmul17_0)),a(s,Xmul17_1)),z),Xmul17_2),l(Xmul17_3,362.Xmul17_5[362]))
+ (18)  a(a(a(a(a(pi,Xmul18_0),z),a(s,Xmul18_1)),Xmul18_2),l(Xmul18_3,365.a(a(a(up,Xmul18_4[365]),empty),Xmul18_5[365]))) => a(a(a(up,a(a(xpls,Xmul18_0),Xmul18_1)),empty),a(a(a(a(a(pi,Xmul18_0),z),Xmul18_1),Xmul18_2),l(Xmul18_3,366.Xmul18_5[366])))
+ (19)  a(a(a(a(a(pi,a(s,z)),Xmul19_0),z),Xmul19_1),l(Xmul19_2,369.a(a(a(up,Xmul19_3[369]),empty),Xmul19_4[369]))) => a(a(uUp,a(s,Xmul19_0)),a(a(a(a(a(pi,z),a(s,Xmul19_0)),z),Xmul19_1),l(Xmul19_2,370.Xmul19_4[370])))
+ (20)  a(a(uUp,z),Xmul20_0) => Xmul20_0
+ (21)  a(a(uUp,a(s,Xmul21_0)),Xmul21_1) => a(a(a(up,Xmul21_0),empty),a(a(uUp,Xmul21_0),Xmul21_1))
+ (22)  a(a(max,z),Xmul22_0) => Xmul22_0
+ (23)  a(a(max,Xmul23_0),z) => Xmul23_0
+ (24)  a(a(max,a(s,Xmul24_0)),a(s,Xmul24_1)) => a(s,a(a(max,Xmul24_0),Xmul24_1))
+ (25)  a(ax,z) => a(s,a(s,z))
+ (26)  a(ax,a(s,Xmul26_0)) => a(s,a(s,Xmul26_0))
+ (27)  a(a(ru,Xmul27_0),z) => z
+ (28)  a(a(ru,Xmul28_0),a(s,Xmul28_1)) => a(a(max,Xmul28_0),a(s,Xmul28_1))
+
+MAYBE
